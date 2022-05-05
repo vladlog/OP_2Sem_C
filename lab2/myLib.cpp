@@ -55,7 +55,7 @@ void create(string name){
             fileif.open(name, ios::binary);
             if (fileif.is_open()) {
                 while (fileif.read((char *) &letter, sizeof(char))) {
-                    if (letter == ' ') {
+                    if (letter == '\n') {
                         base.push_back(text);
                         text = "";
                     }
